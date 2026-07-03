@@ -1,0 +1,6 @@
+{
+  "name": "Apex Movement",
+  "description": "Apex Movement: The world's leading parkour coaching collective. Physics-based training protocols and biomechanical analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

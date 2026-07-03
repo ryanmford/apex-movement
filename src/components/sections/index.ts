@@ -1,0 +1,12 @@
+export { NewHeroSection } from './NewHeroSection';
+export { TheApexMethodSection } from './TheApexMethodSection';
+export { WhatsInsideSection } from './WhatsInsideSection';
+export { TwoCommunitiesSection } from './TwoCommunitiesSection';
+export { TestimonialsSection } from './TestimonialsSection';
+export { CoachesSection } from './CoachesSection';
+export { PricingSection } from './PricingSection';
+export { FaqSection } from './FaqSection';
+export { FinalCtaSection } from './FinalCtaSection';
+export { LibrarySection } from './LibrarySection';
+export { PathfinderSection } from './PathfinderSection';
+export { ProjectsSection } from './ProjectsSection';
