@@ -64,9 +64,9 @@ export function WhatsInsideSection() {
               <div className={`${theme === 'dark' ? 'bg-[#1C1D1F] border-white/10' : 'bg-white border-black/10'} border-4 overflow-hidden relative shadow-[24px_24px_0px_0px_rgba(251,191,36,0.2)] transform md:rotate-[2deg] group-hover:rotate-0 transition-transform duration-500`}>
                   <div className={`border-b-2 ${theme === 'dark' ? 'border-white/10' : 'border-black/10'} px-4 py-3 flex items-center gap-3`}>
                     <div className="w-6 h-6 bg-zinc-800 flex items-center justify-center">
-                        <span className="text-[10px] text-white font-bold">PS</span>
+                        <span className="text-[10px] text-white font-bold">AM</span>
                     </div>
-                    <div className={`text-sm font-bold ${theme === 'dark' ? 'text-gray-200' : 'text-zinc-800'} flex-1`}>Parkour Skool by Apex Movement</div>
+                    <div className={`text-sm font-bold ${theme === 'dark' ? 'text-gray-200' : 'text-zinc-800'} flex-1`}>Apex Movement Skool</div>
                     <div className="flex gap-3">
                         <div className="w-5 h-5 rounded-full bg-zinc-800 relative">
                           <div className={`absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 ${theme === 'dark' ? 'border-[#1C1D1F]' : 'border-white'}`}></div>

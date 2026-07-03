@@ -26,7 +26,7 @@ export function CoachesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {[
-            { name: 'Coach Ryan', role: 'Head Coach & Founder', desc: '15+ years experience. Has coached dozens of World Champions. Architect of the Apex systems.' },
+            { name: 'Coach Ryan', role: 'Head Coach & Founder', desc: '20+ years experience. Has coached dozens of World Champions. Architect of the Apex systems.' },
             { name: 'Coach Alex', role: 'Strength Specialist', desc: 'Specializes in bulletproofing athletes for longevity and maximizing raw power generation.' },
             { name: 'Coach Dave', role: 'Speed & Flow Expert', desc: 'Master of efficiency, speed courses, and helping athletes enter flow states on demand.', colSpan: true }
           ].map((coach, i) => (

@@ -35,14 +35,6 @@ export interface Product {
   gif: string;
 }
 
-export interface BlogPost {
-  id: string;
-  date: string;
-  title: string;
-  preview: string;
-  gif: string;
-}
-
 export interface Movement {
   title: string;
   law: string;

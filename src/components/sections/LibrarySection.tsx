@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Loader2, ArrowRight, ExternalLink } from 'lucide-react';
-import { Badge, Image, Button } from '../ui';
+import { SectionHeader, Image, Button } from '../ui';
 import { useAppContext } from '../../contexts/AppContext';
 import { CONFIG } from '../../data';
 
@@ -24,13 +24,12 @@ export function LibrarySection() {
   return (
     <section id="library" className="py-16 md:py-24 px-6 max-w-7xl mx-auto overflow-hidden scroll-mt-24">
       <div className="mb-12 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-10">
-        <div className="space-y-4 md:space-y-6">
-          <Badge theme={theme}>Kinetic Database</Badge>
-          <h2 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter lowercase leading-none">library.</h2>
-          <p className="text-base md:text-xl opacity-50 lowercase italic font-medium leading-tight max-w-md">
-            A repository of human kinetic potential. Synchronized mechanical samples.
-          </p>
-        </div>
+        <SectionHeader 
+          badge="Kinetic Database" 
+          title="library." 
+          description="A repository of human kinetic potential. Synchronized mechanical samples." 
+          theme={theme} 
+        />
         {isLoadingMovements && (
           <div className="flex items-center gap-3 opacity-30 text-[10px] font-black uppercase tracking-widest">
             <Loader2 className="animate-spin" size={14} /> Localizing Records...
@@ -43,10 +42,10 @@ export function LibrarySection() {
           <div 
             key={index} 
             onClick={() => setActiveManual(item)} 
-            className={`group border-4 border-current ${theme === 'dark' ? 'bg-neutral-900/50 hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)]' : 'bg-white hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]'} overflow-hidden transition-all duration-500 ease-out cursor-pointer active:scale-[0.98] animate-in fade-in slide-in-from-bottom-12 max-w-sm mx-auto w-full`} 
+            className={`group border-4 border-current ${theme === 'dark' ? 'bg-zinc-900/50 hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)]' : 'bg-white hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]'} overflow-hidden transition-all duration-500 ease-out cursor-pointer active:scale-[0.98] animate-in fade-in slide-in-from-bottom-12 max-w-sm mx-auto w-full`} 
             style={{ animationDelay: `${index * 150}ms` }}
           >
-            <div className="bg-neutral-100 dark:bg-neutral-800 relative overflow-hidden border-b-4 border-current aspect-[4/5]">
+            <div className={`relative overflow-hidden border-b-4 border-current aspect-[4/5] ${theme === 'dark' ? 'bg-zinc-800' : 'bg-neutral-100'}`}>
               <Image src={item.gif} alt={item.title} coloredOnHover={true} />
             </div>
             <div className="p-6 md:p-10">

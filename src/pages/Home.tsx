@@ -1,17 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { 
-  NewHeroSection, 
-  TheApexMethodSection, 
-  WhatsInsideSection,
-  TwoCommunitiesSection,
-  LibrarySection,
-  TestimonialsSection,
-  CoachesSection,
-  FaqSection,
-  FinalCtaSection
-} from '../components/sections';
+import { NewHeroSection } from '../components/sections';
+
+// Lazy load below-the-fold sections
+const TheApexMethodSection = lazy(() => import('../components/sections').then(module => ({ default: module.TheApexMethodSection })));
+const WhatsInsideSection = lazy(() => import('../components/sections').then(module => ({ default: module.WhatsInsideSection })));
+const TwoCommunitiesSection = lazy(() => import('../components/sections').then(module => ({ default: module.TwoCommunitiesSection })));
+const LibrarySection = lazy(() => import('../components/sections').then(module => ({ default: module.LibrarySection })));
+const ProjectsSection = lazy(() => import('../components/sections').then(module => ({ default: module.ProjectsSection })));
+const TestimonialsSection = lazy(() => import('../components/sections').then(module => ({ default: module.TestimonialsSection })));
+const CoachesSection = lazy(() => import('../components/sections').then(module => ({ default: module.CoachesSection })));
+const FaqSection = lazy(() => import('../components/sections').then(module => ({ default: module.FaqSection })));
+const FinalCtaSection = lazy(() => import('../components/sections').then(module => ({ default: module.FinalCtaSection })));
 
 export default function Home() {
   const location = useLocation();
@@ -32,14 +33,17 @@ export default function Home() {
     <>
       <SEO />
       <NewHeroSection />
-      <TheApexMethodSection />
-      <WhatsInsideSection />
-      <TwoCommunitiesSection />
-      <LibrarySection />
-      <TestimonialsSection />
-      <CoachesSection />
-      <FaqSection />
-      <FinalCtaSection />
+      <Suspense fallback={<div className="w-full h-32 flex items-center justify-center text-apex-gray"><div className="w-8 h-8 border-2 border-apex-red border-t-transparent rounded-full animate-spin"></div></div>}>
+        <TheApexMethodSection />
+        <WhatsInsideSection />
+        <TwoCommunitiesSection />
+        <LibrarySection />
+        <ProjectsSection />
+        <TestimonialsSection />
+        <CoachesSection />
+        <FaqSection />
+        <FinalCtaSection />
+      </Suspense>
     </>
   );
 }

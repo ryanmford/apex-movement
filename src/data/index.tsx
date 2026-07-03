@@ -90,9 +90,3 @@ export const PRODUCTS = [
     gif: GIF_POOL[2] 
   }
 ];
-
-export const BLOG_POSTS = [
-  { id: "post-1", date: "MAR 2024", title: "The Physics of Impact.", preview: "Why training exclusively on mats creates a 'sensory gap' that leads to injury. Understanding environmental force.", gif: GIF_POOL[0] },
-  { id: "post-2", date: "FEB 2024", title: "Quantifying Power.", preview: "Moving away from subjective aesthetics toward objective metrics in parkour competition and training.", gif: GIF_POOL[2] },
-  { id: "post-3", date: "JAN 2024", title: "Archival Intelligence.", preview: "Why we moved our 20-year library to Skool to foster a decentralized, logic-driven community.", gif: GIF_POOL[1] }
-];

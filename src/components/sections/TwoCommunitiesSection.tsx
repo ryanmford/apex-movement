@@ -25,7 +25,7 @@ export function TwoCommunitiesSection() {
             <div className={`w-14 h-14 ${theme === 'dark' ? 'bg-zinc-800 text-white' : 'bg-zinc-200 text-black'} flex items-center justify-center mb-6`}>
               <Mountain className="w-7 h-7" />
             </div>
-            <h3 className={`text-3xl font-black lowercase tracking-tighter mb-3`}>parkour skool app</h3>
+            <h3 className={`text-3xl font-black lowercase tracking-tighter mb-3`}>apex movement skool</h3>
             <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 leading-relaxed font-medium lowercase`}>
               For athletes and coaches focused on their own movement. Connect with others for free, then upgrade inside the platform to group coaching or 1-on-1 individual design.
             </p>
@@ -41,7 +41,7 @@ export function TwoCommunitiesSection() {
               href="https://www.skool.com/apexmovement"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-amber-400 text-zinc-950 px-6 py-3 font-black uppercase tracking-widest text-[11px] hover:bg-amber-500 transition-colors active:scale-95"
+              className="inline-flex items-center gap-2 bg-amber-400 text-zinc-950 px-8 py-4 font-black uppercase tracking-[0.2em] text-[11px] hover:bg-amber-500 transition-all hover:scale-105 active:scale-95 border-2 border-amber-400 shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]"
             >
               JOIN FOR FREE
             </a>
@@ -79,9 +79,9 @@ export function TwoCommunitiesSection() {
                   href="https://calendly.com/apexmovement/strategy"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-amber-400 text-zinc-950 px-6 py-3 font-black uppercase tracking-widest text-[11px] hover:bg-amber-500 transition-colors active:scale-95"
+                  className="inline-flex items-center gap-2 bg-amber-400 text-zinc-950 px-8 py-4 font-black uppercase tracking-[0.2em] text-[11px] hover:bg-amber-500 transition-all hover:scale-105 active:scale-95 border-2 border-amber-400 shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]"
                 >
-                  Book a Call
+                  APPLY NOW
                 </a>
               </div>
             </div>

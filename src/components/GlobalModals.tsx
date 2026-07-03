@@ -3,14 +3,13 @@ import { useAppContext } from '../contexts/AppContext';
 import { Modal } from './Modal';
 import { Badge, Button, Image } from './ui';
 import { CONFIG } from '../data';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 export function GlobalModals() {
   const { 
     theme, 
     activeManual, setActiveManual,
-    activeProject, setActiveProject,
-    activeBlogPost, setActiveBlogPost
+    activeProject, setActiveProject
   } = useAppContext();
 
   return (
@@ -56,7 +55,7 @@ export function GlobalModals() {
                 Access Full Training Protocol <ExternalLink size={16} />
               </Button>
             </div>
-            <div className="order-1 lg:order-2 border-4 border-current bg-neutral-100 dark:bg-neutral-900 aspect-square lg:aspect-auto">
+            <div className={`order-1 lg:order-2 border-4 border-current aspect-square lg:aspect-auto ${theme === 'dark' ? 'bg-zinc-900' : 'bg-neutral-100'}`}>
               <Image src={activeManual.gif} alt={activeManual.title} coloredOnHover={true} />
             </div>
           </div>
@@ -84,34 +83,9 @@ export function GlobalModals() {
                 </Button>
               )}
             </div>
-            <div className="md:w-1/2 border-4 border-current bg-neutral-100 dark:bg-neutral-900 aspect-[4/3] md:aspect-auto">
+            <div className={`md:w-1/2 border-4 border-current aspect-[4/3] md:aspect-auto ${theme === 'dark' ? 'bg-zinc-900' : 'bg-neutral-100'}`}>
               <Image src={activeProject.gif} alt={activeProject.title} coloredOnHover={true} />
             </div>
-          </div>
-        )}
-      </Modal>
-
-      <Modal isOpen={!!activeBlogPost} onClose={() => setActiveBlogPost(null)} theme={theme}>
-        {activeBlogPost && (
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-4 md:mb-8">
-              <div>
-                <Badge className="mb-4 md:mb-6" theme={theme}>{activeBlogPost.date}</Badge>
-                <h2 className="text-4xl sm:text-6xl md:text-7xl font-black lowercase tracking-tighter leading-none break-words">
-                  {activeBlogPost.title}
-                </h2>
-              </div>
-            </div>
-            <div className="border-4 border-current aspect-video bg-neutral-100 dark:bg-neutral-900 mb-4 md:mb-8">
-              <Image src={activeBlogPost.gif} alt={activeBlogPost.title} forceColor={true} />
-            </div>
-            <div className="space-y-6 max-w-3xl font-medium opacity-80 leading-relaxed text-sm md:text-lg">
-              <p className="lowercase">{activeBlogPost.preview}</p>
-              <p className="lowercase italic opacity-60">Full article transmission available in the Skool archive.</p>
-            </div>
-            <Button onClick={() => window.open(CONFIG.skoolLink, '_blank')} className="w-full md:w-auto self-start" theme={theme}>
-              Read on Skool <ArrowRight size={16} />
-            </Button>
           </div>
         )}
       </Modal>

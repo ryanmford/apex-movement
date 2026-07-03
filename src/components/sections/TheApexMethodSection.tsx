@@ -58,7 +58,7 @@ export function TheApexMethodSection() {
             <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8">
               <div className="flex flex-col sm:flex-row gap-2 md:gap-4 mb-2 md:mb-4">
                 <div className={`${theme === 'dark' ? 'bg-zinc-950/80 border-white/10' : 'bg-white/80 border-black/10'} backdrop-blur-md px-4 py-2 md:px-5 md:py-3 border-2 flex-1 sm:flex-none`}>
-                  <div className="text-amber-500 font-black text-xl md:text-2xl mb-0.5 md:mb-1">15+</div>
+                  <div className="text-amber-500 font-black text-xl md:text-2xl mb-0.5 md:mb-1">20+</div>
                   <div className={`text-[10px] md:text-[11px] ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} uppercase tracking-widest font-black`}>Years Coaching</div>
                 </div>
                 <div className={`${theme === 'dark' ? 'bg-zinc-950/80 border-white/10' : 'bg-white/80 border-black/10'} backdrop-blur-md px-4 py-2 md:px-5 md:py-3 border-2 flex-1 sm:flex-none`}>

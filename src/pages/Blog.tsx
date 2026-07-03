@@ -14,7 +14,7 @@ export default function Blog() {
       <SEO title="Blog" description="Read our latest articles on growth, AI, and strategy." />
       <section className="pt-32 md:pt-48 pb-24 px-6 max-w-5xl mx-auto overflow-hidden animate-in fade-in duration-1000 min-h-screen flex flex-col">
       <div className="mb-16 md:mb-32 space-y-6 md:space-y-10 text-center md:text-left">
-        <button onClick={() => navigate('/')} className="flex items-center min-h-[44px] gap-3 text-[10px] md:text-[11px] font-black uppercase tracking-[0.4em] opacity-30 hover:opacity-100 cursor-pointer transition-all group mx-auto md:mx-0 bg-transparent border-none active:scale-95">
+        <button onClick={() => navigate('/')} className="flex items-center min-h-[44px] gap-3 text-[10px] md:text-[11px] font-black uppercase tracking-[0.4em] opacity-70 hover:opacity-100 cursor-pointer transition-all group mx-auto md:mx-0 bg-transparent border-none active:scale-95">
           <ChevronLeft size={18} className="group-hover:-translate-x-2 transition-transform" /> Return Home
         </button>
         <Heading>blog.</Heading>
