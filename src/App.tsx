@@ -13,7 +13,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <AppProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<RootLayout />}>
               <Route index element={<Home />} />
